@@ -5,5 +5,5 @@ package dahei.me.designpattern.Behavioral.Strategy;
  */
 
 public interface PriceStrategy {
-    double getStrategyPrice();
+    double getStrategyPrice(double price);
 }

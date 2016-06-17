@@ -1,6 +1,6 @@
 package dahei.me.designpattern.CreationalPattern.Prototype;
 
-import dahei.me.designpattern.Behavioral.Strategy.IPhone;
+import dahei.me.designpattern.CreationalPattern.FactoryMethod.IPhone;
 import dahei.me.designpattern.CreationalPattern.FactoryMethod.Phone;
 
 /**

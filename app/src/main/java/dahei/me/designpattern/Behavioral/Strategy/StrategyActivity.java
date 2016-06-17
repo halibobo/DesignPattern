@@ -13,6 +13,9 @@ import dahei.me.designpattern.CreationalPattern.AbstractFactory.IPhone6s;
 import dahei.me.designpattern.CreationalPattern.AbstractFactory.Nokia1520Phone;
 import dahei.me.designpattern.CreationalPattern.AbstractFactory.Nokia920Phone;
 import dahei.me.designpattern.BaseActivity;
+import dahei.me.designpattern.CreationalPattern.FactoryMethod.IPhone;
+import dahei.me.designpattern.CreationalPattern.FactoryMethod.NokiaPhone;
+import dahei.me.designpattern.CreationalPattern.FactoryMethod.Phone;
 import dahei.me.designpattern.R;
 
 /**
@@ -26,8 +29,11 @@ public class StrategyActivity extends BaseActivity {
 
     @BindView(R.id.tvPrice)
     TextView tvPrice;
-    private IPhone mIphone5,mIphone6s;
-    private NokiaPhone mNokia920,mNokia1520;
+    private IPhone mIphone5;
+    private NokiaPhone nokiaPhone;
+
+    PriceStrategy priceStrategy = new FirstMember();
+    PriceStrategy priceStrategy2 = new SecondMember();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,10 +44,8 @@ public class StrategyActivity extends BaseActivity {
     }
 
     private void init() {
-        mIphone6s = new IPhone6s();
         mIphone5 = new IPhone5();
-        mNokia920 = new Nokia920Phone();
-        mNokia1520 = new Nokia1520Phone();
+        nokiaPhone = new Nokia920Phone();
     }
 
     @Override
@@ -49,24 +53,24 @@ public class StrategyActivity extends BaseActivity {
         super.onResume();
     }
 
-    private double getPhonePrice(PriceStrategy priceStrategy) {
-        return priceStrategy.getStrategyPrice();
-    }
 
     @OnClick({R.id.btnIPhone, R.id.btnNokia})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnIPhone:
-                tvPrice.setText(
-                        mIphone5.getName()+"'s price is " + getPhonePrice(mIphone5)+"\n"+
-                                mIphone6s.getName()+"'s price is " + getPhonePrice(mIphone6s)
 
+                tvPrice.setText(
+                        "mIphone5 price is " + mIphone5.getPrice()+"\n"+
+                        "FirstMember : iphone price is "+ priceStrategy.getStrategyPrice(mIphone5.getPrice())+"\n"+
+                        "SecondMember : iphone price is "+ priceStrategy2.getStrategyPrice(mIphone5.getPrice())
                 );
                 break;
             case R.id.btnNokia:
                 tvPrice.setText(
-                        mNokia920.getName() + "'s price is " + getPhonePrice(mNokia920) + "\n" +
-                                mNokia1520.getName() + "'s price is " + getPhonePrice(mNokia1520));
+                        "nokiaPhone price is " + nokiaPhone.getPrice()+"\n"+
+                                "FirstMember : nokiaPhone price is "+ priceStrategy.getStrategyPrice(nokiaPhone.getPrice())+"\n"+
+                                "SecondMember : nokiaPhone price is "+ priceStrategy2.getStrategyPrice(nokiaPhone.getPrice())
+                );
                 break;
         }
     }

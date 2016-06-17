@@ -1,7 +1,5 @@
 package dahei.me.designpattern.CreationalPattern.FactoryMethod;
 
-import dahei.me.designpattern.Behavioral.Strategy.IPhone;
-
 /**
  * Created by su on 2016/6/16.
  */

@@ -9,7 +9,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import dahei.me.designpattern.BaseActivity;
-import dahei.me.designpattern.Behavioral.Strategy.IPhone;
+import dahei.me.designpattern.CreationalPattern.FactoryMethod.IPhone;
 import dahei.me.designpattern.R;
 
 /**

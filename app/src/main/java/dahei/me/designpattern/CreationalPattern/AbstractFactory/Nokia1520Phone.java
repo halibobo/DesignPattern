@@ -1,6 +1,6 @@
 package dahei.me.designpattern.CreationalPattern.AbstractFactory;
 
-import dahei.me.designpattern.Behavioral.Strategy.NokiaPhone;
+import dahei.me.designpattern.CreationalPattern.FactoryMethod.NokiaPhone;
 
 /**
  * Created by su on 2016/6/16.

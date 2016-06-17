@@ -6,6 +6,7 @@ import dahei.me.designpattern.CreationalPattern.Builder.BuilderActivity;
 import dahei.me.designpattern.CreationalPattern.FactoryMethod.FactoryMethodActivity;
 import dahei.me.designpattern.CreationalPattern.Prototype.PrototypeActivity;
 import dahei.me.designpattern.CreationalPattern.Singleton.SingletonActivity;
+import dahei.me.designpattern.Structural.AdapterPattern.AdapterActivity;
 import dahei.me.designpattern.Structural.Proxy.ProxyActivity;
 
 /**
@@ -20,5 +21,6 @@ public class Global {
             {"Prototype(原型模式)", PrototypeActivity.class.getName()},
             {"Singleton(单例模式)", SingletonActivity.class.getName()},
             {"Proxy(代理模式)", ProxyActivity.class.getName()},
+            {"Adapter(适配器模式)", AdapterActivity.class.getName()},
     };
 }

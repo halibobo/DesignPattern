@@ -34,6 +34,8 @@
             android:label="Singleton"/>
         <activity android:name=".Structural.Proxy.ProxyActivity"
             android:label="Proxy"/>
+        <activity android:name=".Structural.AdapterPattern.AdapterActivity"
+            android:label="Adapter"/>
     </application>
 
 </manifest>

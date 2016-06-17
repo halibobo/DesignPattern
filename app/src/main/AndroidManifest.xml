@@ -25,9 +25,15 @@
             android:name=".CreationalPattern.FactoryMethod.FactoryMethodActivity">
         </activity>
         <activity android:name=".CreationalPattern.AbstractFactory.AbstractFactoryActivity"
-            android:label=" AbstractFactory"></activity>
+            android:label=" AbstractFactory"/>
         <activity android:name=".CreationalPattern.Builder.BuilderActivity"
-            android:label="Builder"></activity>
+            android:label="Builder"/>
+        <activity android:name=".CreationalPattern.Prototype.PrototypeActivity"
+            android:label="Prototype"/>
+        <activity android:name=".CreationalPattern.Singleton.SingletonActivity"
+            android:label="Singleton"/>
+        <activity android:name=".Structural.Proxy.ProxyActivity"
+            android:label="Proxy"/>
     </application>
 
 </manifest>

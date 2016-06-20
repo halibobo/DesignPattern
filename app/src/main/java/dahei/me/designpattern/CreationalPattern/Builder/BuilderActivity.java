@@ -20,6 +20,9 @@ public class BuilderActivity extends BaseActivity {
     @BindView(R.id.tvTip)
     TextView tvTip;
 
+    PhoneBuilder phoneBuilder;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +32,8 @@ public class BuilderActivity extends BaseActivity {
     }
 
     private void init() {
-        componentsFactory = new ComponentsFactory();
+        phoneBuilder = new ComponentsMachine();
+        componentsFactory = new ComponentsFactory(phoneBuilder);
     }
 
     @OnClick({R.id.btnIPhone, R.id.btnXiaomi, R.id.btnHuawei})

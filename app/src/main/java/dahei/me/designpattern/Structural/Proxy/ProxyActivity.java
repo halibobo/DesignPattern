@@ -20,7 +20,7 @@ public class ProxyActivity extends BaseActivity {
     @BindView(R.id.tvTip)
     TextView tvTip;
 
-    private IPhoneProductFactory iPhoneProductFactory;
+    private ProductIPhoneInterface iPhoneProductFactory;
     StringBuilder stringBuilder;
 
     @Override

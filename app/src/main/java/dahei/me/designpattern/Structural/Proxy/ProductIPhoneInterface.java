@@ -9,6 +9,6 @@ import dahei.me.designpattern.CreationalPattern.FactoryMethod.IPhone;
 /**
  * 生产iphone接口
  */
-public interface ProductIPhoneInterface {
-    IPhone createIPhone();
+public abstract class ProductIPhoneInterface {
+    public abstract IPhone createIPhone();
 }

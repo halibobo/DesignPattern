@@ -9,7 +9,7 @@ import dahei.me.designpattern.CreationalPattern.FactoryMethod.IPhone;
 /**
  * iphone工厂
  */
-public class IPhoneProductFactory {
+public class IPhoneProductFactory extends ProductIPhoneInterface {
     private FoxconnFactory foxconnFactory = new FoxconnFactory();
 
     public IPhone createIPhone() {

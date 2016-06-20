@@ -6,21 +6,25 @@ import dahei.me.designpattern.CreationalPattern.FactoryMethod.Phone;
  * Created by su on 2016/6/16.
  */
 public class ComponentsFactory {
-    private ComponentsMachine componentsMachine = new ComponentsMachine();
+    private PhoneBuilder phoneBuilder;
+
+    public ComponentsFactory(PhoneBuilder componentsMachine) {
+        this.phoneBuilder = componentsMachine;
+    }
 
     public Phone getIphone4() {
-        componentsMachine.setPhoneType("iphone4", 1000);
-        return componentsMachine.getPhone();
+        phoneBuilder.setPhoneType("iphone4", 1000);
+        return phoneBuilder.getPhone();
     }
 
     public Phone getXiaoMi5() {
-        componentsMachine.setPhoneType("xiami 5", 1999);
-        return componentsMachine.getPhone();
+        phoneBuilder.setPhoneType("xiami 5", 1999);
+        return phoneBuilder.getPhone();
     }
 
     public Phone getHuaWeiMate() {
-        componentsMachine.setPhoneType("huawei mate8", 3600);
-        return componentsMachine.getPhone();
+        phoneBuilder.setPhoneType("huawei mate8", 3600);
+        return phoneBuilder.getPhone();
     }
 
 }

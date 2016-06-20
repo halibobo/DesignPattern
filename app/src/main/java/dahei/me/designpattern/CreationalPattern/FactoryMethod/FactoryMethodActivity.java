@@ -23,8 +23,8 @@ public class FactoryMethodActivity extends BaseActivity {
     @BindView(R.id.tvTip)
     TextView tvTip;
 
-    private IPhoneFactory iPhoneFactory;
-    private NokiaPhoneFactory nokiaPhoneFactory;
+    private PhoneFactory iPhoneFactory;
+    private PhoneFactory nokiaPhoneFactory;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
